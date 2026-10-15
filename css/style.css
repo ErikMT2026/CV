@@ -1,0 +1,149 @@
+.card {
+    background: #f3f3f3;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 55px;
+}
+        body {
+            font-family: Verdana;
+            margin: 0;
+        }
+
+        .cv {
+            width: calc(100% - 20px);
+            max-width: 620px;
+            margin: 20px auto;
+            display: flex;
+            border: 2px solid #333;
+        }
+
+        .sidebar {
+            width: 32%;
+            background: #5b5b5b;
+            padding: 30px 15px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .content {
+            width: 68%;
+            background: #c7c7c7;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+
+        .photo {
+            width: 105px;
+            height: 135px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .card {
+            background: #f3f3f3;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 55px;
+        }
+
+        .sidebar .card {
+            background: #c7c7c7;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .content .card {
+            width: 80%;
+            margin-left: auto;
+        }
+
+        .content .left {
+            margin-left: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 0;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 1.8;
+        }
+        .photo {
+    width: 105px;
+    height: 135px;
+    border-radius: 10px;
+    object-fit: cover;
+        }
+
+.sidebar .card.references {
+    text-align: center;
+    position: relative;
+    top: 110px;
+}
+
+.sidebar .card.references h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.sidebar .card.references p {
+    text-align: center;
+}
+.content{
+    padding-bottom: 15px;
+}
+.content .card:last-child{
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+
+    .cv {
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .content {
+        width: 100%;
+    }
+
+    .content .card,
+    .content .left {
+        width: 100%;
+        margin-left: 0;
+        box-sizing: border-box;
+    }
+
+    .sidebar .card.references {
+        top: 0;
+    }
+
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon {
+    height: 30px;
+    object-fit: contain;
+    display: block;
+    margin-top: 10px;
+}
+
+.instagram {
+    width: 30px;
+}
+
+.facebook {
+    width: 30px;
+}
+
+.linkedin {
+    transform: scale(1.15);
+    width: 30px;
+}
