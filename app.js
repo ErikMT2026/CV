@@ -1,21 +1,26 @@
-const images = ['man.avif', '2.jpeg', '3.jpeg'];
-const targetImage = document.querySelector('.photo');
-let i = 1;
+const express = require('express');
+const path = require('path');
+const cv = require('./data/cv.json');
 
-targetImage.addEventListener('click', () => {
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-    targetImage.style.opacity = '0';
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-    setTimeout(() => {
+// Keep using the existing CSS and photo folders to preserve the design.
+app.use('/css', express.static(path.join(__dirname, 'css')));
+app.use('/photo', express.static(path.join(__dirname, 'photo')));
+app.use(express.static(path.join(__dirname, 'public')));
 
-        targetImage.src = 'photo/' + images[i];
-        i++;
-        if (i >= images.length) {
-            i = 0;
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
 
-        }
+app.get('/', (req, res) => {
+  res.render('cv', { cv });
+});
 
-targetImage.style.opacity = '1';
-
-    }, 500);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`CV app is running on port ${PORT}`);
 });
