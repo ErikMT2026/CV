@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EF_CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<div class="cv">
+
+    <div class="sidebar">
+
+        <img class="photo" src="/photo/man.avif">
+
+        <h3 id="full-name"><%= cv.name %> <%= cv.surname %></h3>
+        <p>Age: <span id="age"><%= cv.age %></span></p>
+
+
+        <h2>Contact:</h2>
+        <p>Email: <a id="email" href="mailto:<%= cv.email %>"><%= cv.email %></a></p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/e_rik1804/">
+            <img class="social-icon instagram"src="photo/INSTA.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100073478799045">
+                <img class="social-icon facebook" src="photo/FB.png" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com/in/erik-fedorov-3539512a3/?isSelfProfile=true">
+                <img class="social-icon linkedin"src="photo/LIN.png" alt="LinkedIn">
+            </a>
+        </div>
+
+        <div class="card">
+            <h2>Summary</h2>
+            <hr>
+            <p>
+                sodales. felis, libero, vel consectetur sit commodo urna. risus elit massa lacus viverra quis faucibus cursus tincidunt ullamcorper maximus efficitur. elit ac Nunc vitae dui. 
+
+
+
+            </p>
+        </div>
+
+        <div class="card references">
+        
+            <h2>References</h2>
+            <hr>
+            <p>Available upon request.</p>
+            
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <div class="card">
+            <h2>Education:</h2>
+            <hr>
+            <p>
+                2026 - ... Mechanical Engineering,
+                Tallinna Tehnikakõrgkool
+            </p>
+            <p>
+                2023 - 2026 Narva Gümnaasium
+            </p>
+        
+        </div>
+
+        <div class="card left">
+            <h2>Work Experience:</h2>
+            <hr>
+            <p>
+                libero, vel consectetur sit commodo urna. risus elit massa lacus viverra quis faucibus cursus tincidunt ullamcorper maximus efficitur. elit ac Nunc vitae dui. 
+
+non. amet, Nam faucibus maximus Praesent laoreet vel placerat. ipsum viverra est. 
+
+
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Skills:</h2>
+            <hr>
+            <p>
+                Solid Edge<br>
+                SolidWorks<br>
+                3D Modelling<br>
+                Technical Drawings
+            </p>
+        </div>
+
+        <div class="card left">
+            <h2>Languages:</h2>
+            <hr>
+            <p>
+                Estonian - B2 level<br>
+                English - B2+ level<br>
+                Russian - Native
+            </p>
+        </div>
+
+    </div>
+<script src="/app.js"></script>
+</div>
+
+</body>
+</html>
