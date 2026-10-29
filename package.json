@@ -1,0 +1,16 @@
+{
+  "name": "erik-cv",
+  "version": "1.0.0",
+  "description": "CV website rendered with Express, EJS, and JSON data",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
