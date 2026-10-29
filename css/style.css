@@ -37,6 +37,7 @@
             height: 135px;
             border-radius: 10px;
             object-fit: cover;
+            transition: opacity 0.2s ease;
         }
 
         .card {
