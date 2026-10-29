@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= cv.name %> <%= cv.surname %> — CV</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="cv">
+    <div class="sidebar">
+        <img class="photo" src="<%= cv.photo %>" alt="Portrait of <%= cv.name %> <%= cv.surname %>" title="Click to change photo">
+        <h3><%= cv.name %> <%= cv.surname %></h3>
+        <p class="age">Age: <%= cv.age %></p>
+
+        <h2>Contact:</h2>
+        <div class="social-links">
+            <% cv.contacts.forEach(function(contact) { %>
+                <a href="<%= contact.url %>" target="_blank" rel="noopener noreferrer" aria-label="<%= contact.label %>">
+                    <img class="social-icon <%= contact.className %>" src="<%= contact.icon %>" alt="<%= contact.label %>">
+                </a>
+            <% }); %>
+        </div>
+
+        <div class="card">
+            <h2>Summary</h2>
+            <hr>
+            <p><%= cv.summary %></p>
+        </div>
+
+        <div class="card references">
+            <h2>References</h2>
+            <hr>
+            <p><%= cv.references %></p>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <h2>Education:</h2>
+            <hr>
+            <% cv.education.forEach(function(item) { %>
+                <p>
+                    <%= item.period %>
+                    <% if (item.qualification) { %>
+                        <%= item.qualification %>,
+                    <% } %>
+                    <%= item.institution %>
+                </p>
+            <% }); %>
+        </div>
+
+        <div class="card left">
+            <h2>Work Experience:</h2>
+            <hr>
+            <p><strong><%= cv.experience.title %></strong></p>
+            <p><%= cv.experience.description %></p>
+        </div>
+
+        <div class="card">
+            <h2>Skills:</h2>
+            <hr>
+            <p>
+                <% cv.skills.forEach(function(skill, index) { %>
+                    <%= skill %><% if (index < cv.skills.length - 1) { %><br><% } %>
+                <% }); %>
+            </p>
+        </div>
+
+        <div class="card left">
+            <h2>Languages:</h2>
+            <hr>
+            <p>
+                <% cv.languages.forEach(function(language, index) { %>
+                    <%= language.name %> - <%= language.level %><% if (index < cv.languages.length - 1) { %><br><% } %>
+                <% }); %>
+            </p>
+        </div>
+    </div>
+</div>
+<script src="/client.js"></script>
+</body>
+</html>
